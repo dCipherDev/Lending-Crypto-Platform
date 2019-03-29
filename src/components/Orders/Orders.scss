@@ -1,0 +1,31 @@
+.OrdersWrapper {
+  background: rgba(246, 246, 246, 1.0);
+
+  > div:not(.HeaderWrapper):not(.Loading) {
+    max-width: 1180px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.Checking {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background: -moz-linear-gradient(0deg, #28c4ab 0%, #101c26 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #28c4ab), color-stop(100%, #101c26));
+  background: -webkit-linear-gradient(0deg, #28c4ab 0%, #101c26 100%);
+  background: -o-linear-gradient(0deg, #28c4ab 0%, #101c26 100%);
+  background: -ms-linear-gradient(0deg, #28c4ab 0%, #101c26 100%);
+  background: linear-gradient(90deg, #28c4ab 0%, #101c26 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#101c26', endColorstr='#28c4ab',GradientType=1 );
+
+  font-size: 34px;
+  color: white;
+  text-align: center;
+  line-height: 100vh;
+}

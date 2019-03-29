@@ -1,0 +1,141 @@
+.FormInputWrapper {
+  .InputLabel {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.3);
+    text-align: left;
+    line-height: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .FormInputs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .FormInput {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    position: relative;
+
+    &.WETH {
+      input {
+        padding-right: 55px;
+      }
+    }
+
+    &.Prefix {
+      input {
+        padding-left: 40px;
+        padding-right: 20px;
+      }
+    }
+
+    input {
+      width: 100%;
+      border: 0;
+      padding: 9px 40px 9px 15px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 1.0);
+      text-align: center;
+
+      &:read-only {
+        background: rgba(0, 0, 0, .1);
+      }
+    }
+
+    &.Arrow {
+      input {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      .after,
+      .before {
+        width: 0;
+        height: 0;
+        border-left: 5px solid #e5e5e5;
+        border-bottom: 5px solid transparent;
+        border-top: 5px solid transparent;
+        position: absolute;
+        right: 14px;
+        top: 16px;
+        cursor: pointer;
+
+        &:hover {
+          border-left-color: #b2b2b2;
+          border-right-color: #b2b2b2;
+        }
+      }
+
+      .before {
+        left: 14px;
+        border-left: 0;
+        border-right: 5px solid #e5e5e5;
+      }
+    }
+
+    .Prefix {
+      position: absolute;
+      left: 13px;
+      top: 9px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, .4);
+    }
+
+    .Suffix {
+      position: absolute;
+      right: 13px;
+      top: 9px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, .4);
+    }
+
+    &:first-child {
+      input {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+      }
+    }
+
+    &:last-child {
+      input {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+      }
+    }
+  }
+}
+
+.Loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #28c4ab;
+  border-radius: 2px;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  .Loader {
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-top: 3px solid #000000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
